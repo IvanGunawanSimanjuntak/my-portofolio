@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ivan Gunawan Simanjuntak</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="Logo Ivan Gunawan">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-text hidden">
+                <span class="greeting">Hello, I'm</span>
+                <h1>Ivan Gunawan<br>Simanjuntak</h1>
+                <p>Computer Technology Student @ IT Del | Network Security | IoT & Mobile Developer</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">Lihat Projek</a>
+                    <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+                </div>
+            </div>
+            <div class="hero-image hidden">
+                <div class="img-wrapper">
+                    <img src="img/2.jpeg" alt="Ivan Gunawan Profile">
+                </div>
+            </div>  
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title hidden">Who is Ivan?</h2>
+            <div class="about-content hidden">
+                <p>
+                    As a final-year <strong>Computer Technology student</strong> at <strong>Institut Teknologi Del</strong>, I am deeply passionate about <strong>DevOps Engineering</strong> and <strong>Cybersecurity</strong>. My technical journey involves hands-on experience with <strong>Infrastructure as Code (IaC)</strong> and automation, where I have successfully deployed stacks like WordPress, MariaDB, and Nginx on Minikube utilizing <strong>Docker</strong>, <strong>Kubernetes</strong>, <strong>Ansible</strong>, and <strong>OpenTofu</strong>.
+                </p>
+                <p>
+                    Beyond infrastructure, I possess a solid foundation in <strong>network security</strong> and <strong>penetration testing</strong>. In the realm of IoT, I engineer solutions using <strong>ESP32</strong> and <strong>Raspberry Pi</strong>, leveraging tools like <strong>Mosquitto</strong>, <strong>Node-RED</strong>, and <strong>Grafana</strong> for data processing. Currently, I am expanding my horizons by developing a <strong>Flutter</strong> mobile app integrated with custom IoT libraries, while relying on <strong>GitHub</strong> for version control and collaboration.
+                </p>
+                
+                <div class="info-grid">
+                    <div class="info-card hidden">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education</h3>
+                        <p>D3 Teknologi Komputer<br>Institut Teknologi Del<br>(2023 - Present)</p>
+                    </div>
+
+                    <div class="info-card hidden">
+                        <i class="fas fa-terminal"></i>
+                        <h3>Focus Area</h3>
+                        <p>DevOps, Cloud Infrastructure, IoT Systems, Mobile Apps</p>
+                    </div>
+
+                    <div class="info-card hidden">
+                        <i class="fas fa-users"></i>
+                        <h3>Organization</h3>
+                        <p>BEM IT Del - Arts & Culture Department (Active Member)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title hidden">Technical Skills</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-item hidden">
+                    <i class="fab fa-linux"></i>
+                    <div class="skill-info">
+                        <h4>DevOps & Cloud</h4>
+                        <p>Docker, Kubernetes, Ansible, OpenTofu, Linux Admin</p>
+                    </div>
+                </div>
+
+                <div class="skill-item hidden">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="skill-info">
+                        <h4>Cybersecurity</h4>
+                        <p>Wazuh SIEM, Penetration Testing, Network Security</p>
+                    </div>
+                </div>
+
+                <div class="skill-item hidden">
+                    <i class="fas fa-microchip"></i>
+                    <div class="skill-info">
+                        <h4>IoT Ecosystem</h4>
+                        <p>ESP32, Raspberry Pi, Arduino, Node-RED, Mosquitto</p>
+                    </div>
+                </div>
+
+                <div class="skill-item hidden">
+                    <i class="fab fa-android"></i>
+                    <div class="skill-info">
+                        <h4>Mobile Development</h4>
+                        <p>Flutter, Android Studio, Kotlin, Java</p>
+                    </div>
+                </div>
+
+                <div class="skill-item hidden">
+                    <i class="fas fa-server"></i>
+                    <div class="skill-info">
+                        <h4>Web & Backend</h4>
+                        <p>Nginx, MariaDB, HTML/CSS, PHP</p>
+                    </div>
+                </div>
+
+                <div class="skill-item hidden">
+                    <i class="fas fa-tools"></i>
+                    <div class="skill-info">
+                        <h4>Tools & Monitoring</h4>
+                        <p>Git, Grafana, InfluxDB, VS Code</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title hidden">Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card hidden">
+                    <div class="card-img">
+                        <img src="img/3.png" alt="Stationery Catalog">
+                    </div>
+                    <div class="card-body">
+                        <h3>Stationery Catalog Website</h3>
+                        <span class="badge">Full Stack Developer</span>
+                        <p>Managed the end-to-end development of a responsive web catalog. Designed a clean, user-friendly UI/UX and coordinated team workflows to ensure timely delivery.</p>
+                        
+                        <a href="https://github.com/IvanGunawanSimanjuntak/Stationery-Catalog" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Lihat Kode
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card hidden">
+                    <div class="card-img">
+                        <img src="img/4.png" alt="BLE Mobile App">
+                    </div>
+                    <div class="card-body">
+                        <h3>BLE-Based Book Location System</h3>
+                        <span class="badge">IoT & Mobile Engineer</span>
+                        <p>Built an IoT scanning system using ESP32 to detect BLE signals. Integrated hardware with a mobile application UI to visualize real-time book locations.</p>
+
+                        <a href="https://github.com/IvanGunawanSimanjuntak/pa-2" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Lihat Kode
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card hidden">
+                    <div class="card-img">
+                        <img src="img/5.png" alt="DDoS Detection">
+                    </div>
+                    <div class="card-body">
+                        <h3>DDoS Detection Using Wazuh</h3>
+                        <span class="badge">Security Engineer</span>
+                        <p>Developed an anomaly-based detection system with automated route nullification. Implemented real-time alert monitoring to mitigate security threats effectively.</p>
+
+                        <a href="https://github.com/IvanGunawanSimanjuntak/TA" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Lihat Kode
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-dark">
+        <div class="container contact-wrapper hidden">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="quote">"Technology is best when it brings people together."</p>
+            
+            <div class="social-grid">
+                
+                <a href="https://www.linkedin.com/in/ivan-simanjuntak-47b6a133a/" target="_blank" class="social-card">
+                    <div class="icon-box"><i class="fab fa-linkedin-in"></i></div>
+                    <div class="social-text">
+                        <h3>LinkedIn</h3>
+                        <p>Ivan Simanjuntak</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/guunnn____" target="_blank" class="social-card">
+                    <div class="icon-box"><i class="fab fa-instagram"></i></div>
+                    <div class="social-text">
+                        <h3>Instagram</h3>
+                        <p>@guunnn____</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/IvanGunawanSimanjuntak" target="_blank" class="social-card">
+                    <div class="icon-box"><i class="fab fa-github"></i></div>
+                    <div class="social-text">
+                        <h3>GitHub</h3>
+                        <p>IvanGunawanSimanjuntak</p>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/6281262099033" target="_blank" class="social-card">
+                    <div class="icon-box"><i class="fab fa-whatsapp"></i></div>
+                    <div class="social-text">
+                        <h3>WhatsApp</h3>
+                        <p>+62 812-6209-9033</p>
+                    </div>
+                </a>
+
+                <a href="mailto:ivang7351@gmail.com" class="social-card">
+                    <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                    <div class="social-text">
+                        <h3>Email</h3>
+                        <p>ivang7351@gmail.com</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ivan Gunawan Simanjuntak. All Rights Reserved.</p>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
