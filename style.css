@@ -1,8 +1,3 @@
-/* ==========================================
-   PORTFOLIO IVAN GUNAWAN SIMANJUNTAK
-   Style: Black & White Minimalist + Tech Grid
-   ========================================== */
-
 /* --- GLOBAL VARIABLES --- */
 :root {
     --bg-main: #0a0a0a;
@@ -41,30 +36,49 @@ body {
     background-attachment: fixed;
 }
 
+/* =========================================
+   CURSOR LIGHT EFFECT (NEW)
+   ========================================= */
+.cursor-light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px; /* Ukuran cahaya */
+    height: 350px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 60%);
+    transform: translate(-50%, -50%); /* Agar cursor ada di tengah cahaya */
+    pointer-events: none; /* Agar bisa klik tembus cahaya */
+    z-index: 9999;
+    mix-blend-mode: screen; /* Blending halus dengan background */
+    transition: width 0.3s, height 0.3s; /* Smooth jika ingin ubah ukuran saat hover */
+}
+
+/* =========================================
+   NAVBAR & LOGO (UPDATED)
+   ========================================= */
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
-/* --- NAVBAR --- */
 .navbar {
     position: fixed; top: 0; width: 100%;
     background: rgba(10, 10, 10, 0.95);
-    padding: 15px 0; /* Padding sedikit dikecilkan agar pas dengan logo */
+    padding: 15px 0;
     z-index: 1000;
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(15px);
 }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 
-/* --- LOGO IMAGE STYLE (FIXED) --- */
+/* LOGO STYLE FIXED (RESIZED) */
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
-    height: 75px; /* Menjaga area logo tetap konsisten */
+    height: 45px; /* Disesuaikan agar sejajar dengan text menu */
 }
 
 .logo img {
-    height: 100%; /* Mengikuti tinggi container .logo (75px) */
-    width: auto;  /* Lebar menyesuaikan agar tidak gepeng */
+    height: 100%; 
+    width: auto;
     object-fit: contain; 
     display: block;
 }
@@ -115,38 +129,174 @@ body {
     backdrop-filter: blur(5px);
 }
 
-/* --- ABOUT --- */
+/* --- ABOUT CONTENT --- */
 .about-content p {
     font-size: 1.15rem; line-height: 1.9; color: var(--text-sec); margin-bottom: 50px;
     text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;
 }
+
 .info-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px;
 }
+
+/* --- INFO CARD --- */
 .info-card {
-    background: var(--bg-card); padding: 40px 30px; border: 1px solid var(--border); text-align: center; transition: 0.3s;
+    background: var(--bg-card);
+    padding: 40px 30px;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
-.info-card:hover { border-color: var(--accent); transform: translateY(-5px); }
-.info-card i { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
-.info-card h3 { font-size: 1.3rem; margin-bottom: 15px; font-weight: 600; }
-.info-card p { color: var(--text-sec); font-size: 0.95rem; line-height: 1.6; }
+
+.info-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.05);
+    background: linear-gradient(145deg, #1f1f1f, #252525);
+}
+
+.info-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.info-card:hover i {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.info-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.info-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: var(--border);
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+.info-card:hover h3::after {
+    width: 80px; 
+    background: var(--accent);
+}
+
+.info-card p {
+    color: var(--text-sec);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
 
 /* --- SKILLS GRID --- */
 .skills-grid { 
     display: grid; 
     grid-template-columns: repeat(3, minmax(240px, 1fr)); 
-    gap: 20px; 
+    gap: 30px; 
 }
+
 .skill-item {
-    background: var(--bg-card); padding: 25px; border: 1px solid var(--border);
-    display: flex; align-items: center; gap: 20px; transition: 0.3s;
-    min-height: 110px;
-    position: relative; z-index: 1;
+    background: var(--bg-card); 
+    padding: 35px 25px; 
+    border: 1px solid var(--border);
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s ease;
+    min-height: 200px;
+    position: relative; 
+    z-index: 1;
+    overflow: hidden;
 }
-.skill-item:hover { border-color: var(--accent); transform: translateY(-5px); background: var(--bg-sec); }
-.skill-item i { font-size: 2rem; color: var(--accent); width: 40px; text-align: center; }
-.skill-info h4 { font-size: 1.1rem; margin-bottom: 5px; font-weight: 600; color: var(--text-main); }
-.skill-info p { color: var(--text-sec); font-size: 0.85rem; margin: 0; line-height: 1.4; }
+
+.skill-item:hover { 
+    border-color: var(--accent); 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.05);
+    background: linear-gradient(145deg, #1f1f1f, #252525);
+}
+
+.skill-item i { 
+    font-size: 2.2rem; 
+    color: var(--accent); 
+    width: 70px; 
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+.skill-item:hover i {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.skill-info h4 { 
+    font-size: 1.15rem; 
+    margin-bottom: 10px; 
+    font-weight: 600; 
+    color: var(--text-main); 
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.skill-info h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: var(--border);
+    transition: 0.4s;
+}
+
+.skill-item:hover h4::after {
+    width: 60px;
+    background: var(--accent);
+}
+
+.skill-info p { 
+    color: var(--text-sec); 
+    font-size: 0.9rem; 
+    margin: 0; 
+    line-height: 1.5; 
+}
 
 /* --- PROJECTS --- */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
@@ -160,14 +310,28 @@ body {
 }
 .project-card:hover .card-img img { filter: grayscale(0%); transform: scale(1.05); }
 .card-body { padding: 30px; }
-.card-body h3 { font-size: 1.3rem; margin-bottom: 12px; font-weight: 600; }
+.card-body h3 { 
+    font-size: 1.3rem; 
+    margin-bottom: 12px; 
+    font-weight: 600;
+    
+    /* --- PERBAIKAN MULAI --- */
+    min-height: 3.6rem; /* Memaksa tinggi minimal setara 2 baris teks */
+    line-height: 1.4;   /* Mengatur jarak antar baris agar rapi */
+    
+    /* Opsional: Memastikan teks tidak lebih dari 2 baris (jika judul kepanjangan) */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* --- PERBAIKAN SELESAI --- */
+}
 .badge {
     display: inline-block; padding: 5px 15px; background: var(--bg-main); border: 1px solid var(--accent);
     color: var(--accent); font-size: 0.75rem; margin-bottom: 15px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
 }
 .card-body p { color: var(--text-sec); line-height: 1.7; font-size: 0.95rem; }
 
-/* LINK GITHUB */
 .project-link {
     display: inline-flex; align-items: center; gap: 8px; margin-top: 20px;
     color: var(--text-main); text-decoration: none; font-weight: 600; font-size: 0.9rem;
@@ -175,7 +339,7 @@ body {
 }
 .project-link:hover { color: var(--text-sec); border-bottom: 1px solid var(--text-sec); transform: translateX(5px); }
 
-/* --- CONTACT SECTION (FLEXBOX STRUKTUR) --- */
+/* --- CONTACT SECTION --- */
 .contact-wrapper { max-width: 900px; margin: 0 auto; text-align: center; }
 .quote { font-size: 1.3rem; color: var(--text-sec); margin-bottom: 50px; font-style: italic; font-weight: 300; }
 
@@ -202,7 +366,6 @@ body {
     max-width: 400px;
 }
 
-/* Brand Hover Colors Logic */
 .social-card { --brand: var(--accent); }
 .social-card[href*="linkedin.com"] { --brand: var(--brand-linkedin); }
 .social-card[href*="instagram.com"] { --brand: var(--brand-instagram); }

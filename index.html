@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Ivan Gunawan Simanjuntak</title>
+    
     <link rel="stylesheet" href="style.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <div class="cursor-light"></div>
 
     <nav class="navbar">
         <div class="container nav-container">
@@ -41,6 +45,7 @@
                     <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
                 </div>
             </div>
+            
             <div class="hero-image hidden">
                 <div class="img-wrapper">
                     <img src="img/2.jpeg" alt="Ivan Gunawan Profile">
@@ -144,6 +149,23 @@
         <div class="container">
             <h2 class="section-title hidden">Featured Projects</h2>
             <div class="projects-grid">
+
+                <div class="project-card hidden">
+                    <div class="card-img">
+                        <img src="img/6.png" alt="TaskPro Dashboard">
+                    </div>
+                    <div class="card-body">
+                        <h3>TaskPro - AI Management System</h3>
+                        <span class="badge">Full Stack & AI Engineer</span>
+                        <p>
+                            Enterprise-ready productivity platform featuring <strong>Real-time Kanban</strong> (WebSockets) and a context-aware <strong>AI Assistant</strong> (Google Gemini). Built with Next.js, Python FastAPI, and PostgreSQL to visualize productivity insights.
+                        </p>
+                        
+                        <a href="https://github.com/IvanGunawanSimanjuntak/TaskPro-AI-Management" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Lihat Kode
+                        </a>
+                    </div>
+                </div>
                 
                 <div class="project-card hidden">
                     <div class="card-img">
@@ -154,7 +176,7 @@
                         <span class="badge">Full Stack Developer</span>
                         <p>Managed the end-to-end development of a responsive web catalog. Designed a clean, user-friendly UI/UX and coordinated team workflows to ensure timely delivery.</p>
                         
-                        <a href="https://github.com/IvanGunawanSimanjuntak/Stationery-Catalog" target="_blank" class="project-link">
+                        <a href="https://github.com/IvanGunawanSimanjuntak/PA-1-gas" target="_blank" class="project-link">
                             <i class="fab fa-github"></i> Lihat Kode
                         </a>
                     </div>
@@ -252,5 +274,13 @@
     <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
+    
+    <script>
+        const cursorLight = document.querySelector('.cursor-light');
+        document.addEventListener('mousemove', (e) => {
+            cursorLight.style.left = e.clientX + 'px';
+            cursorLight.style.top = e.clientY + 'px';
+        });
+    </script>
 </body>
 </html>
