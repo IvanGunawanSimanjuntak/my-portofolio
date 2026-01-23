@@ -86,3 +86,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ======================================
+// 5. ACTIVE LINK ON SCROLL (Scroll Spy)
+// Agar menu navigasi berubah warna saat di-scroll
+// ======================================
+const sections = document.querySelectorAll('section');
+const navItems = document.querySelectorAll('.nav-links li a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        // Logika: Jika scroll sudah masuk 1/3 dari section
+        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navItems.forEach(a => {
+        a.classList.remove('active-link'); // Hapus class lama
+        if (a.getAttribute('href').includes(current)) {
+            a.classList.add('active-link'); // Tambah class ke menu yang aktif
+        }
+    });
+});
+
+// ======================================
+// 6. DYNAMIC YEAR (Otomatis Ganti Tahun)
+// ======================================
+const yearSpan = document.querySelector('footer p');
+const currentYear = new Date().getFullYear();
+yearSpan.innerHTML = `&copy; ${currentYear} Ivan Gunawan Simanjuntak. All Rights Reserved.`;

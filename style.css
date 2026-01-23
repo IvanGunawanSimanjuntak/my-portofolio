@@ -412,6 +412,10 @@ footer p { color: var(--text-sec); font-size: 0.9rem; }
         position: fixed; right: -100%; top: 70px; height: calc(100vh - 70px); width: 100%;
         background: var(--bg-sec); flex-direction: column; align-items: center; justify-content: flex-start;
         padding-top: 50px; transition: 0.4s ease-in-out; border-top: 1px solid var(--border);
+        color: var(--accent);
+        font-weight: 700;
+        border-bottom: 2px solid var(--accent);
+        
     }
     .nav-links.active { right: 0; }
     .nav-links li { margin: 25px 0; }
